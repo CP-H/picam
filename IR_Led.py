@@ -6,7 +6,6 @@ from rpi_hardware_pwm import HardwarePWM
 
 class irLed(object):
     def __init__(self, pwm_channel=0):
-
         self.pi_pwm = HardwarePWM(pwm_channel, hz=25_000) #create PWM instance with frequency
         self.pi_pwm.start(0) #start PWM of required Duty Cycle 
         self.isOn = False
